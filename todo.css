@@ -1,0 +1,193 @@
+﻿html {
+  background-color: #fffbbd;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  background-size: cover;
+  transform: translate3d(0, 0, 0);    
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+a,
+a:link,
+a:visited {
+    color: rgb(0, 0, 0);
+}
+
+a:hover,
+a:link:hover,
+a:visited:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.task-container {
+  width: 800px;
+  margin-top: 75px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  background-color: #fffbbd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: .95;
+  overflow-y: auto;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+form {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  width: 750px;
+}
+
+@media screen and (max-width: 1007px) {
+  form {
+    width: 575px;
+  }
+}
+
+input[type="text"] {
+  color: black;
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+button[type="submit"] {
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fffcc1a9;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+button[type="submit"]:hover {
+  background-color: #fffdda44;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  flex-grow: 1;
+  max-height: calc(100% - 60px);
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .todo-list {
+    flex-grow: 1;
+    max-height: calc(100% - 60px);
+    overflow-y: auto;
+  }
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: #fffddaa9;
+  transition: all 0.3s ease;
+  opacity: .9;
+}
+
+.todo-list li:hover {
+  background-color: #f2f2f2;
+  transform: translateY(-5px);
+}
+
+.todo-list li span {
+  flex: 1;
+}
+
+.todo-list li button {
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #e74c3c;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.todo-list li button:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .container {
+      max-width: 90%;
+  }
+}
+
+.completed span {
+  text-decoration: line-through;
+}
+
+.completed .complete-btn,
+.completed .delete-btn {
+  text-decoration: none;
+}
+
+/* ... (existing CSS rules) ... */
+
+.todo-list li .complete-btn {
+  margin-right: 5px;
+}
+
+.todo-list li .delete-btn {
+  margin-left: 5px;
+}
+
+/* ... (existing CSS rules) ... */
+
+
+.home {
+  margin-top: 25px;
+}
+
+.dragging {
+  opacity: 0.5;
+  transform: scale(0.98);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.drag-enter {
+  background-color: #f2f2f2;
+  transform: scale(1.02);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
